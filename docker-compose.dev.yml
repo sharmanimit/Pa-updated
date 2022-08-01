@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: updatedreact
+    image: updatedreact
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
+    environment:
+    - "REACT_APP_LOGOUT_URL= http://11.0.0.118:8180/auth/realms/sample/protocol/openid-connect/logout?redirect_uri=http://pa.openshift.example.com:3000/eoffice"
+    - "REACT_APP_KEYCLOAK_URL=http://11.0.0.118:8180/auth/"
+    - "REACT_APP_KEYCLOAK_REALM=sample"
+    - "REACT_APP_KEYCLOAK_CLIENTID=costa_frontend"
+    - "REACT_APP_SYNCFUSION_URL=http://11.0.0.118:9070/webservices/api/wordeditor/Import"
+    - "REACT_APP_SYNCFUSION_SERVICE_URL=http://11.0.0.118:9070/webservices/api/wordeditor/"
+    - "REACT_APP_PDF_SAMPLE_URL=http://11.0.0.118:9000/template/sample.pdf"
+    - "REACT_UPSTREAM=http://10.131.1.6:9090"
+    

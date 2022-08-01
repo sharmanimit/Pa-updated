@@ -1,0 +1,24 @@
+.alertMsg
+{
+    margin-top: 69px;position: absolute;z-index: 1000;
+}
+body #topnav{
+
+ position: absolute;
+}
+.loader
+{
+    position: absolute;
+    z-index: 100000;
+    /* margin-right: 16vw; */
+    margin-left: -11vw;
+    margin-top: 16vw;
+}
+.loadBox
+{
+    width: 100%;
+    height: 600vw;
+    background: #0000004a;
+    position: absolute;
+    z-index: 100000;
+}
